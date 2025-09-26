@@ -16,21 +16,21 @@ const HeroSection = () => {
           </div>
           
           {/* Be Fast - Speed lines */}
-          <div className="absolute top-1/3 right-16 space-y-2 animate-pulse" style={{animationDelay: '1s'}}>
-            {Array.from({length: 6}).map((_, i) => (
-              <div 
-                key={i}
-                className="h-1 bg-white/20 rounded-full transform -skew-x-12"
-                style={{
-                  width: `${60 - i * 8}px`,
-                  animationDelay: `${i * 0.1}s`
-                }}
-              />
-            ))}
+          <div className="absolute top-1/3 right-16 space-y-2 animate-pulse" style={{
+          animationDelay: '1s'
+        }}>
+            {Array.from({
+            length: 6
+          }).map((_, i) => <div key={i} className="h-1 bg-white/20 rounded-full transform -skew-x-12" style={{
+            width: `${60 - i * 8}px`,
+            animationDelay: `${i * 0.1}s`
+          }} />)}
           </div>
           
           {/* Be Customer Centric - Concentric circles */}
-          <div className="absolute bottom-32 left-1/4 animate-pulse" style={{animationDelay: '2s'}}>
+          <div className="absolute bottom-32 left-1/4 animate-pulse" style={{
+          animationDelay: '2s'
+        }}>
             <div className="w-24 h-24 border-2 border-white/20 rounded-full flex items-center justify-center">
               <div className="w-16 h-16 border-2 border-white/15 rounded-full flex items-center justify-center">
                 <div className="w-8 h-8 bg-white/20 rounded-full" />
@@ -39,17 +39,21 @@ const HeroSection = () => {
           </div>
           
           {/* Additional floating elements */}
-          <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-bounce" style={{animationDuration: '8s'}} />
-          <div className="absolute bottom-1/4 right-1/3 w-40 h-40 bg-brand-accent/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s'}} />
+          <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-bounce" style={{
+          animationDuration: '8s'
+        }} />
+          <div className="absolute bottom-1/4 right-1/3 w-40 h-40 bg-brand-accent/10 rounded-full blur-3xl animate-pulse" style={{
+          animationDuration: '4s'
+        }} />
           
           {/* Subtle grid pattern */}
           <div className="absolute inset-0 opacity-5" style={{
-            backgroundImage: `
+          backgroundImage: `
               linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
               linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px'
-          }} />
+          backgroundSize: '50px 50px'
+        }} />
         </div>
       </div>
 
@@ -58,8 +62,8 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Logo/Brand */}
           <div className="mb-8 flex items-center justify-center gap-3">
-            <img src={beezzyLogo} alt="Beezzy Logo" className="w-12 h-12" />
-            <h1 className="text-4xl md:text-5xl font-bold font-montserrat tracking-tight">
+            
+            <h1 className="text-4xl font-bold font-montserrat tracking-tight mx-0 md:text-9xl">
               Beezzy
             </h1>
           </div>
