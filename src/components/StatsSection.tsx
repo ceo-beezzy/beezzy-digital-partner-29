@@ -1,24 +1,30 @@
-import { TrendingUp, Users, DollarSign, Clock } from "lucide-react";
+import { TrendingUp, Target, Award, Zap } from "lucide-react";
 
 const StatsSection = () => {
   const stats = [
     {
-      icon: Users,
-      number: "350+",
-      label: "Empresas Atendidas",
-      description: "Transformamos negócios de todos os portes"
+      icon: TrendingUp,
+      number: "245%",
+      label: "Média de Crescimento",
+      description: "Aumento médio de conversão dos nossos clientes"
     },
     {
-      icon: DollarSign,
-      number: "R$ 15M+",
-      label: "Investidos em Projetos",
-      description: "Capital aplicado em soluções digitais"
+      icon: Target,
+      number: "90",
+      label: "Dias Médios",
+      description: "Para retorno do investimento em nossos projetos"
     },
     {
-      icon: Clock,
-      number: "5+",
-      label: "Anos de Mercado",
-      description: "Experiência consolidada no digital"
+      icon: Award,
+      number: "100%",
+      label: "Taxa de Sucesso",
+      description: "Clientes que alcançaram ou superaram suas metas"
+    },
+    {
+      icon: Zap,
+      number: "72h",
+      label: "Implementação",
+      description: "Tempo médio para primeira entrega de valor"
     }
   ];
 
@@ -32,14 +38,14 @@ const StatsSection = () => {
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-foreground mb-6">
-            Números que Falam por Si
+            Resultados que <span className="bg-gradient-primary bg-clip-text text-transparent">Entregamos</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Nossa trajetória é marcada por resultados consistentes e crescimento sustentável
+            Métricas reais baseadas nos resultados alcançados pelos nossos clientes nos últimos 12 meses
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
@@ -76,20 +82,12 @@ const StatsSection = () => {
           })}
         </div>
 
-        {/* Bottom CTA */}
+        {/* Impact Statement */}
         <div className="text-center mt-16">
-          <p className="text-lg text-muted-foreground mb-6">
-            Faça parte dessas estatísticas de sucesso
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-brand-success/10 text-brand-success text-sm font-medium">
-              <div className="w-2 h-2 bg-brand-success rounded-full animate-pulse" />
-              Consultoria Gratuita
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary/10 text-brand-primary text-sm font-medium">
-              <div className="w-2 h-2 bg-brand-primary rounded-full animate-pulse" />
-              Resposta em 24h
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground italic">
+              "Cada número representa uma história de transformação, uma empresa que cresceu e um sonho que se tornou realidade."
+            </p>
           </div>
         </div>
       </div>

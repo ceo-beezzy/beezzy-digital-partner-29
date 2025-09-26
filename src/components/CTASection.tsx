@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, Phone } from "lucide-react";
+import { TrendingUp, Calendar, Target, Award } from "lucide-react";
 
-const CTASection = () => {
+const CaseSuccessSection = () => {
   return (
     <section className="py-24 bg-gradient-hero relative overflow-hidden">
       {/* Background decorations */}
@@ -12,63 +11,83 @@ const CTASection = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          {/* Main CTA */}
+        <div className="max-w-6xl mx-auto text-center text-white">
+          {/* Main Title */}
           <h2 className="text-4xl md:text-6xl font-bold font-montserrat mb-6 leading-tight">
-            Vamos Transformar
-            <span className="block">Seu Negócio Juntos?</span>
+            Case de <span className="text-brand-accent">Sucesso</span>
           </h2>
           
           <p className="text-xl md:text-2xl font-light font-montserrat mb-12 opacity-90 max-w-3xl mx-auto">
-            Entre em contato conosco e descubra como podemos ser o parceiro estratégico que sua empresa precisa para prosperar no mundo digital.
+            Como transformamos uma empresa em crise em uma história de recuperação e crescimento sustentável
           </p>
 
-          {/* Contact Options */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-              <Mail className="w-8 h-8 mx-auto mb-4 text-brand-accent group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-semibold font-montserrat mb-2">Email</h3>
-              <p className="text-sm opacity-80">contato@beezzy.com</p>
+          {/* Case Study Card */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20 mb-12 text-left">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-16 h-16 bg-brand-accent rounded-2xl flex items-center justify-center">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold font-montserrat text-white">Imobiliária Nova Era</h3>
+                <p className="text-brand-accent font-medium">De prejuízo a lucro em 90 dias</p>
+              </div>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-              <Phone className="w-8 h-8 mx-auto mb-4 text-brand-accent group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-semibold font-montserrat mb-2">Telefone</h3>
-              <p className="text-sm opacity-80">(11) 9999-9999</p>
+
+            {/* Challenge */}
+            <div className="mb-8">
+              <h4 className="text-xl font-bold font-montserrat mb-4 text-white flex items-center gap-2">
+                <Target className="w-5 h-5 text-brand-accent" />
+                O Desafio
+              </h4>
+              <p className="text-lg opacity-90 leading-relaxed">
+                A Nova Era estava enfrentando mais de <strong className="text-brand-accent">8 meses consecutivos sem lucro</strong>, 
+                com processos desorganizados, baixa conversão de leads e perda constante de clientes para a concorrência.
+              </p>
+            </div>
+
+            {/* Results */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white/5 rounded-2xl p-6 text-center">
+                <Calendar className="w-8 h-8 text-brand-accent mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white">3º</div>
+                <div className="text-sm text-brand-accent font-medium">MÊS</div>
+                <div className="text-sm opacity-80 mt-1">Retorno ao lucro</div>
+              </div>
+              <div className="bg-white/5 rounded-2xl p-6 text-center">
+                <TrendingUp className="w-8 h-8 text-brand-accent mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white">245%</div>
+                <div className="text-sm text-brand-accent font-medium">AUMENTO</div>
+                <div className="text-sm opacity-80 mt-1">Conversão de leads</div>
+              </div>
+              <div className="bg-white/5 rounded-2xl p-6 text-center">
+                <Award className="w-8 h-8 text-brand-accent mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white">100%</div>
+                <div className="text-sm text-brand-accent font-medium">DIGITAL</div>
+                <div className="text-sm opacity-80 mt-1">Processos automatizados</div>
+              </div>
+            </div>
+
+            {/* Solution */}
+            <div>
+              <h4 className="text-xl font-bold font-montserrat mb-4 text-white flex items-center gap-2">
+                <TrendingUp className="w-5 h-5 text-brand-accent" />
+                A Transformação
+              </h4>
+              <p className="text-lg opacity-90 leading-relaxed">
+                Implementamos uma <strong className="text-brand-accent">estratégia integrada</strong> combinando automação de processos, 
+                otimização de marketing digital e reestruturação da gestão comercial. O resultado foi uma transformação completa 
+                que não apenas trouxe a empresa de volta à lucratividade, mas estabeleceu bases sólidas para crescimento contínuo.
+              </p>
             </div>
           </div>
 
-          {/* Primary CTA */}
-          <div className="mb-12">
-            <Button 
-              variant="secondary" 
-              size="lg"
-              className="px-12 py-6 text-lg font-semibold bg-white text-brand-primary hover:bg-white/90 shadow-large hover:shadow-glow hover:scale-105"
-            >
-              Solicitar Proposta
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </div>
-
-          {/* Trust indicators */}
-          <div className="border-t border-white/20 pt-8">
-            <p className="text-sm opacity-70 mb-4 font-montserrat">
-              Já transformamos mais de 100 empresas
+          {/* Impact Statement */}
+          <div className="bg-brand-accent/20 backdrop-blur-sm rounded-2xl p-6 border border-brand-accent/30">
+            <p className="text-lg font-medium font-montserrat">
+              <span className="text-brand-accent">"A Beezzy não apenas nos tirou da crise,</span> nos deu as ferramentas e estratégias 
+              para nunca mais voltarmos a essa situação. Hoje somos referência no mercado."
             </p>
-            <div className="flex justify-center items-center gap-8 text-sm opacity-60 flex-wrap">
-              <span className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-brand-accent rounded-full" />
-                Consultoria gratuita
-              </span>
-              <span className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-brand-accent rounded-full" />
-                Resposta em 24h
-              </span>
-              <span className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-brand-accent rounded-full" />
-                Sem compromisso
-              </span>
-            </div>
+            <p className="text-sm opacity-80 mt-2">— Diretor Comercial, Nova Era Imóveis</p>
           </div>
         </div>
       </div>
@@ -76,4 +95,4 @@ const CTASection = () => {
   );
 };
 
-export default CTASection;
+export default CaseSuccessSection;

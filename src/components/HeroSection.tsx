@@ -84,15 +84,14 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="gradient" size="lg" className="px-8 py-6 text-lg font-semibold">
-              Conheça Nossas Soluções
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button variant="outline" size="lg" className="px-8 py-6 text-lg bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm">
-              Fale Conosco
-            </Button>
+          {/* Value Proposition Statement */}
+          <div className="text-center">
+            <p className="text-2xl md:text-3xl font-semibold font-montserrat text-brand-accent mb-4">
+              Mais que uma empresa de tecnologia
+            </p>
+            <p className="text-lg md:text-xl font-light opacity-90 max-w-2xl mx-auto">
+              Somos arquitetos de transformação digital que combinam estratégia, tecnologia e marketing para gerar resultados excepcionais
+            </p>
           </div>
 
           {/* Trust Badge */}

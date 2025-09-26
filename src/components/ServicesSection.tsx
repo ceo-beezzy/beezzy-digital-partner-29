@@ -91,7 +91,7 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Features */}
-                <div className="space-y-2 mb-6">
+                <div className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-2 text-sm">
                       <div className="w-1.5 h-1.5 bg-brand-accent rounded-full" />
@@ -99,37 +99,34 @@ const ServicesSection = () => {
                     </div>
                   ))}
                 </div>
-
-                {/* CTA */}
-                <Button 
-                  variant="ghost" 
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
-                >
-                  Saiba Mais
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
               </div>
             </Card>
           ))}
         </div>
 
-        {/* Bottom CTA */}
+        {/* Value Proposition */}
         <div className="text-center">
           <div className="bg-gradient-card p-8 rounded-3xl shadow-medium border border-card-border max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold font-montserrat mb-4 text-card-foreground">
-              Pronto para transformar seu negócio?
+              O Diferencial Beezzy
             </h3>
             <p className="text-muted-foreground mb-6 text-lg">
-              Descubra como nossas soluções integradas podem acelerar o crescimento da sua empresa
+              Enquanto outros oferecem soluções isoladas, nós integramos estratégia, tecnologia e marketing em um ecossistema único que maximiza resultados e acelera o crescimento sustentável.
             </p>
-            <Button 
-              variant="hero" 
-              size="lg"
-              className="px-8 py-4 text-lg"
-            >
-              Começar Agora
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <div className="grid md:grid-cols-3 gap-4 text-sm">
+              <div className="flex items-center justify-center gap-2 text-muted-foreground">
+                <div className="w-2 h-2 bg-brand-accent rounded-full" />
+                Abordagem integrada
+              </div>
+              <div className="flex items-center justify-center gap-2 text-muted-foreground">
+                <div className="w-2 h-2 bg-brand-accent rounded-full" />
+                Foco em resultados
+              </div>
+              <div className="flex items-center justify-center gap-2 text-muted-foreground">
+                <div className="w-2 h-2 bg-brand-accent rounded-full" />
+                Parceria estratégica
+              </div>
+            </div>
           </div>
         </div>
       </div>
