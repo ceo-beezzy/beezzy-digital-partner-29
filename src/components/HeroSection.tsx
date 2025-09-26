@@ -68,34 +68,42 @@ const HeroSection = () => {
             </h1>
           </div>
 
-          {/* Main Headline */}
-          <h2 className="text-5xl md:text-7xl font-bold font-montserrat leading-tight mb-6">
-            Sua Solução Digital
-            <span className="block bg-gradient-to-r from-brand-accent to-white bg-clip-text text-transparent">
-              Completa
-            </span>
-          </h2>
+          {/* Three Pillars Section */}
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold font-montserrat mb-8 text-brand-accent">
+              Nossos Pilares
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {/* Be Easy */}
+              <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+                <div className="w-16 h-16 mx-auto mb-4 bg-brand-accent/20 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-brand-accent rounded-full"></div>
+                </div>
+                <h3 className="text-xl font-bold font-montserrat text-white mb-2">Be Easy</h3>
+                <p className="text-sm font-light opacity-80">Simplicidade em cada solução</p>
+              </div>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl font-light font-montserrat mb-8 max-w-3xl mx-auto opacity-90">
-            Somos o parceiro estratégico que toda empresa gostaria de ter para crescer e prosperar no mundo digital.
-          </p>
+              {/* Be Fast */}
+              <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+                <div className="w-16 h-16 mx-auto mb-4 bg-brand-accent/20 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-2 bg-brand-accent rounded-full transform -skew-x-12"></div>
+                </div>
+                <h3 className="text-xl font-bold font-montserrat text-white mb-2">Be Fast</h3>
+                <p className="text-sm font-light opacity-80">Agilidade que gera resultados</p>
+              </div>
 
-          {/* Value Proposition */}
-          <div className="mb-12 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 max-w-2xl mx-auto">
-            <p className="text-lg font-medium font-montserrat">
-              Tornando o <span className="text-brand-accent font-bold">complexo simples</span> através de soluções inovadoras
-            </p>
-          </div>
-
-          {/* Value Proposition Statement */}
-          <div className="text-center">
-            <p className="text-2xl md:text-3xl font-semibold font-montserrat text-brand-accent mb-4">
-              Mais que uma empresa de tecnologia
-            </p>
-            <p className="text-lg md:text-xl font-light opacity-90 max-w-2xl mx-auto">
-              Somos arquitetos de transformação digital que combinam estratégia, tecnologia e marketing para gerar resultados excepcionais
-            </p>
+              {/* Be Customer Centric */}
+              <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+                <div className="w-16 h-16 mx-auto mb-4 bg-brand-accent/20 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 border-2 border-brand-accent rounded-full flex items-center justify-center">
+                    <div className="w-4 h-4 bg-brand-accent rounded-full"></div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold font-montserrat text-white mb-2">Be Customer Centric</h3>
+                <p className="text-sm font-light opacity-80">Foco total no cliente</p>
+              </div>
+            </div>
           </div>
 
           {/* Trust Badge */}
