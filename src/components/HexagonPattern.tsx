@@ -1,6 +1,6 @@
 const HexagonPattern = () => {
   return (
-    <div className="absolute bottom-0 left-0 w-[30vw] h-[30vh] pointer-events-none z-0">
+    <div className="absolute bottom-0 left-0 w-[30vw] h-[30vh] pointer-events-none z-[1]">
       <svg
         width="100%"
         height="100%"
