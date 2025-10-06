@@ -4,10 +4,12 @@ import StatsSection from "@/components/StatsSection";
 import PillarsSection from "@/components/PillarsSection";
 import CaseSuccessSection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import HexagonPattern from "@/components/HexagonPattern";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
+    <main className="relative min-h-screen">
+      <HexagonPattern />
       <HeroSection />
       <ServicesSection />
       <StatsSection />
