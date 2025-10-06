@@ -2,8 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroBackground from "@/assets/hero-bg.jpg";
 import beezzyLogo from "@/assets/beezzy-logo.png";
+import HexagonPattern from "@/components/HexagonPattern";
 const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Hexagon Pattern */}
+      <HexagonPattern />
+      
       {/* Background with Brand Pillars Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-accent">
         {/* Animated Brand Elements */}
