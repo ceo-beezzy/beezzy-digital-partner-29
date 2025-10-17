@@ -9,7 +9,7 @@ const HeroSection = () => {
       <HexagonPattern />
       
       {/* Background with Brand Pillars Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-accent">
+      <div className="absolute inset-0 bg-gradient-hero">
         {/* Animated Brand Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Be Easy - Floating geometric shapes */}
@@ -62,7 +62,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center text-white">
+      <div className="relative z-10 container mx-auto px-6 text-center text-brand-cream">
         <div className="max-w-4xl mx-auto">
           {/* Logo/Brand */}
           <div className="mb-8 flex items-center justify-center gap-3">

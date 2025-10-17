@@ -2,7 +2,7 @@ import { TrendingUp, Calendar, Target, Award } from "lucide-react";
 
 const CaseSuccessSection = () => {
   return (
-    <section className="py-24 bg-gradient-hero relative overflow-hidden">
+    <section className="py-24 bg-gradient-warm relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-40 h-40 bg-white/10 rounded-full blur-2xl animate-pulse" />
@@ -11,7 +11,7 @@ const CaseSuccessSection = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-6xl mx-auto text-center text-white">
+        <div className="max-w-6xl mx-auto text-center text-brand-cream">
           {/* Main Title */}
           <h2 className="text-4xl md:text-6xl font-bold font-montserrat mb-6 leading-tight">
             Case de <span className="text-brand-accent">Sucesso</span>
