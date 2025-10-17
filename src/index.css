@@ -17,6 +17,10 @@ All colors MUST be HSL.
     --brand-secondary: 27 68% 50%;
     --brand-accent: 46 62% 92%;
     --brand-brown: 28 53% 19%;
+    --brand-blue-dark: 222 47% 11%;
+    --brand-blue-medium: 217 32% 17%;
+    --brand-blue-bright: 222 100% 60%;
+    --brand-cream-light: 45 71% 92%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(38 96% 58%), hsl(27 68% 50%));
