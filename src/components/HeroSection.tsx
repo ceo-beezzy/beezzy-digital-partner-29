@@ -1,135 +1,112 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import heroBackground from "@/assets/hero-bg.jpg";
-import beezzyLogo from "@/assets/beezzy-logo.png";
-import HexagonPattern from "@/components/HexagonPattern";
 const HeroSection = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Hexagon Pattern */}
-      <HexagonPattern />
-      
-      {/* Background with Brand Pillars Pattern */}
-      <div className="absolute inset-0 bg-gradient-hero">
-        {/* Animated Brand Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Be Easy - Floating geometric shapes */}
-          <div className="absolute top-20 left-10 space-y-4 animate-pulse">
-            <div className="w-16 h-4 bg-white/20 rounded-full transform rotate-12" />
-            <div className="w-12 h-4 bg-white/15 rounded-full transform -rotate-6" />
-            <div className="w-20 h-4 bg-white/10 rounded-full transform rotate-3" />
-          </div>
-          
-          {/* Be Fast - Speed lines */}
-          <div className="absolute top-1/3 right-16 space-y-2 animate-pulse" style={{
-          animationDelay: '1s'
-        }}>
-            {Array.from({
-            length: 6
-          }).map((_, i) => <div key={i} className="h-1 bg-white/20 rounded-full transform -skew-x-12" style={{
-            width: `${60 - i * 8}px`,
-            animationDelay: `${i * 0.1}s`
-          }} />)}
-          </div>
-          
-          {/* Be Customer Centric - Concentric circles */}
-          <div className="absolute bottom-32 left-1/4 animate-pulse" style={{
-          animationDelay: '2s'
-        }}>
-            <div className="w-24 h-24 border-2 border-white/20 rounded-full flex items-center justify-center">
-              <div className="w-16 h-16 border-2 border-white/15 rounded-full flex items-center justify-center">
-                <div className="w-8 h-8 bg-white/20 rounded-full" />
-              </div>
-            </div>
-          </div>
-          
-          {/* Additional floating elements */}
-          <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-bounce" style={{
-          animationDuration: '8s'
-        }} />
-          <div className="absolute bottom-1/4 right-1/3 w-40 h-40 bg-brand-accent/10 rounded-full blur-3xl animate-pulse" style={{
-          animationDuration: '4s'
-        }} />
-          
-          {/* Subtle grid pattern */}
-          <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: `
-              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
-              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)
-            `,
-          backgroundSize: '50px 50px'
-        }} />
-        </div>
-      </div>
+  const currentDate = new Date().toLocaleDateString('pt-BR', { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center text-brand-cream">
-        <div className="max-w-4xl mx-auto">
-          {/* Logo/Brand */}
-          <div className="mb-8 flex items-center justify-center gap-3">
-            
-            <h1 className="text-4xl font-bold font-montserrat tracking-tight mx-0 md:text-9xl">
-              Beezzy
+  return (
+    <section className="min-h-screen bg-background flex flex-col">
+      {/* Newspaper Header */}
+      <header className="border-b-4 border-foreground pt-8 pb-6">
+        <div className="container mx-auto px-6">
+          {/* Date line */}
+          <div className="flex justify-between items-center text-sm uppercase tracking-widest text-muted-foreground mb-4">
+            <span>São Paulo, Brasil</span>
+            <span>{currentDate}</span>
+            <span>Edição Digital</span>
+          </div>
+          
+          {/* Masthead */}
+          <div className="text-center py-8">
+            <h1 className="text-7xl md:text-9xl font-serif font-bold tracking-tight text-foreground">
+              BEEZZY
             </h1>
+            <p className="text-lg md:text-xl font-body italic text-muted-foreground mt-2">
+              "Sua solução digital completa"
+            </p>
           </div>
 
-          {/* Three Pillars Section */}
-          <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-montserrat mb-8 text-brand-accent">
-              Nossos Pilares
+          {/* Section indicators */}
+          <div className="flex justify-center gap-8 text-xs uppercase tracking-[0.3em] text-muted-foreground border-t border-foreground/20 pt-4">
+            <span>Be Easy</span>
+            <span className="text-foreground">•</span>
+            <span>Be Fast</span>
+            <span className="text-foreground">•</span>
+            <span>Be Customer Centric</span>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Headline */}
+      <div className="container mx-auto px-6 py-12 flex-1">
+        <div className="grid md:grid-cols-12 gap-8">
+          {/* Main story */}
+          <div className="md:col-span-8 border-r border-foreground/20 pr-8">
+            <h2 className="text-4xl md:text-6xl font-serif font-bold leading-tight mb-6 text-foreground">
+              Tornamos o complexo simples através de soluções inovadoras
             </h2>
+            <div className="border-t-2 border-foreground w-24 mb-6"></div>
+            <p className="text-xl md:text-2xl font-body leading-relaxed text-muted-foreground mb-8 drop-cap">
+              Há mais de 5 anos, a Beezzy transforma empresas com estratégias digitais que realmente funcionam. 
+              São mais de 350 empresas que confiaram em nossa metodologia única, integrando tecnologia, 
+              gestão e resultados em um ecossistema completo.
+            </p>
             
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              {/* Be Easy */}
-              <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-                <div className="w-16 h-16 mx-auto mb-4 bg-brand-accent/20 rounded-full flex items-center justify-center">
-                  <div className="w-8 h-8 bg-brand-accent rounded-full"></div>
-                </div>
-                <h3 className="text-xl font-bold font-montserrat text-white mb-2">Be Easy</h3>
-                <p className="text-sm font-light opacity-80">Simplicidade em cada solução</p>
+            {/* Three Pillars as newspaper columns */}
+            <div className="grid grid-cols-3 gap-6 border-t border-foreground/20 pt-6">
+              <div className="text-center">
+                <h3 className="font-serif font-bold text-lg mb-2">BE EASY</h3>
+                <p className="text-sm text-muted-foreground font-body">
+                  Simplicidade em cada solução
+                </p>
               </div>
-
-              {/* Be Fast */}
-              <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-                <div className="w-16 h-16 mx-auto mb-4 bg-brand-accent/20 rounded-full flex items-center justify-center">
-                  <div className="w-8 h-2 bg-brand-accent rounded-full transform -skew-x-12"></div>
-                </div>
-                <h3 className="text-xl font-bold font-montserrat text-white mb-2">Be Fast</h3>
-                <p className="text-sm font-light opacity-80">Agilidade que gera resultados</p>
+              <div className="text-center border-x border-foreground/20 px-4">
+                <h3 className="font-serif font-bold text-lg mb-2">BE FAST</h3>
+                <p className="text-sm text-muted-foreground font-body">
+                  Agilidade que gera resultados
+                </p>
               </div>
-
-              {/* Be Customer Centric */}
-              <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-                <div className="w-16 h-16 mx-auto mb-4 bg-brand-accent/20 rounded-full flex items-center justify-center">
-                  <div className="w-12 h-12 border-2 border-brand-accent rounded-full flex items-center justify-center">
-                    <div className="w-4 h-4 bg-brand-accent rounded-full"></div>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold font-montserrat text-white mb-2">Be Customer Centric</h3>
-                <p className="text-sm font-light opacity-80">Foco total no cliente</p>
+              <div className="text-center">
+                <h3 className="font-serif font-bold text-lg mb-2">BE CUSTOMER CENTRIC</h3>
+                <p className="text-sm text-muted-foreground font-body">
+                  Foco total no cliente
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Trust Badge */}
-          <div className="mt-16 text-center">
-            <p className="text-sm font-montserrat opacity-70 mb-2">Mais de 350 empresas transformadas há mais de 5 anos</p>
-            <div className="flex justify-center items-center gap-8 text-sm opacity-60">
-              <span>Be Easy</span>
-              <span>•</span>
-              <span>Be Fast</span>
-              <span>•</span>
-              <span>Be Customer Centric</span>
+          {/* Sidebar news */}
+          <div className="md:col-span-4 space-y-6">
+            <div className="border-b border-foreground/20 pb-6">
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">Destaque</span>
+              <h3 className="font-serif font-bold text-xl mt-2 mb-2">350+ Empresas Transformadas</h3>
+              <p className="text-sm text-muted-foreground font-body">
+                Mais de cinco anos de resultados comprovados no mercado brasileiro.
+              </p>
+            </div>
+            
+            <div className="border-b border-foreground/20 pb-6">
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">Resultados</span>
+              <h3 className="font-serif font-bold text-xl mt-2 mb-2">245% de Crescimento Médio</h3>
+              <p className="text-sm text-muted-foreground font-body">
+                Taxa de conversão dos nossos clientes supera expectativas do mercado.
+              </p>
+            </div>
+
+            <div>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">Velocidade</span>
+              <h3 className="font-serif font-bold text-xl mt-2 mb-2">90 Dias para ROI</h3>
+              <p className="text-sm text-muted-foreground font-body">
+                Retorno do investimento garantido em tempo recorde.
+              </p>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
-        </div>
-      </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;

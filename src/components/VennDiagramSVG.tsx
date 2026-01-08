@@ -10,9 +10,10 @@ const VennDiagramSVG = () => {
         cx="400"
         cy="200"
         r="150"
-        fill="rgba(51, 102, 255, 0.4)"
-        stroke="#3366ff"
-        strokeWidth="2"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-foreground"
       />
       
       {/* Circle for GESTÃO (bottom left) */}
@@ -20,9 +21,10 @@ const VennDiagramSVG = () => {
         cx="300"
         cy="350"
         r="150"
-        fill="rgba(51, 102, 255, 0.3)"
-        stroke="#3366ff"
-        strokeWidth="2"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-foreground"
       />
       
       {/* Circle for TECNOLOGIA (bottom right) */}
@@ -30,44 +32,51 @@ const VennDiagramSVG = () => {
         cx="500"
         cy="350"
         r="150"
-        fill="rgba(51, 102, 255, 0.35)"
-        stroke="#3366ff"
-        strokeWidth="2"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        className="text-foreground"
       />
       
       {/* Text labels */}
       <text
         x="400"
-        y="120"
+        y="100"
         textAnchor="middle"
-        fill="#F7F1DD"
-        fontSize="32"
-        fontWeight="bold"
-        fontFamily="Montserrat, sans-serif"
+        fill="currentColor"
+        fontSize="24"
+        fontWeight="600"
+        fontFamily="'Playfair Display', serif"
+        className="text-foreground uppercase"
+        letterSpacing="0.1em"
       >
         RESULTADO
       </text>
       
       <text
-        x="220"
+        x="180"
         y="450"
         textAnchor="middle"
-        fill="#F7F1DD"
-        fontSize="32"
-        fontWeight="bold"
-        fontFamily="Montserrat, sans-serif"
+        fill="currentColor"
+        fontSize="24"
+        fontWeight="600"
+        fontFamily="'Playfair Display', serif"
+        className="text-foreground uppercase"
+        letterSpacing="0.1em"
       >
         GESTÃO
       </text>
       
       <text
-        x="580"
+        x="620"
         y="450"
         textAnchor="middle"
-        fill="#F7F1DD"
-        fontSize="32"
-        fontWeight="bold"
-        fontFamily="Montserrat, sans-serif"
+        fill="currentColor"
+        fontSize="24"
+        fontWeight="600"
+        fontFamily="'Playfair Display', serif"
+        className="text-foreground uppercase"
+        letterSpacing="0.1em"
       >
         TECNOLOGIA
       </text>
@@ -75,15 +84,28 @@ const VennDiagramSVG = () => {
       {/* Center text - BEEZZY */}
       <text
         x="400"
-        y="300"
+        y="295"
         textAnchor="middle"
-        fill="#0f172a"
-        fontSize="40"
-        fontWeight="bold"
-        fontFamily="Montserrat, sans-serif"
+        fill="currentColor"
+        fontSize="32"
+        fontWeight="700"
+        fontFamily="'Playfair Display', serif"
+        className="text-foreground"
+        letterSpacing="0.05em"
       >
         BEEZZY
       </text>
+
+      {/* Small decorative line under center text */}
+      <line
+        x1="365"
+        y1="310"
+        x2="435"
+        y2="310"
+        stroke="currentColor"
+        strokeWidth="1"
+        className="text-foreground"
+      />
     </svg>
   );
 };
