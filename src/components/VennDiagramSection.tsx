@@ -2,45 +2,48 @@ import VennDiagramSVG from "@/components/VennDiagramSVG";
 
 const VennDiagramSection = () => {
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-b from-brand-dark to-brand-medium overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-brand-blue-bright rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-brand-cream rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20 bg-background border-t border-foreground/20">
+      <div className="container mx-auto px-6">
+        {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-brand-cream font-montserrat">
+          <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Seção V</span>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mt-4 mb-4 text-foreground">
             A Interseção Perfeita
           </h2>
-          <p className="text-lg md:text-xl text-brand-cream/80 max-w-3xl mx-auto font-montserrat">
+          <div className="w-24 h-0.5 bg-foreground mx-auto mb-6"></div>
+          <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto italic">
             Na Beezzy, unimos Resultado, Gestão e Tecnologia para transformar seu negócio
           </p>
         </div>
 
-        <div className="flex justify-center items-center">
-          <div className="relative w-full max-w-2xl">
-            <VennDiagramSVG />
-          </div>
+        {/* Diagram */}
+        <div className="flex justify-center items-center max-w-xl mx-auto mb-16">
+          <VennDiagramSVG />
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="text-center p-6 rounded-lg bg-brand-medium/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all hover:shadow-glow">
-            <h3 className="text-2xl font-bold mb-3 text-brand-cream font-montserrat">Resultado</h3>
-            <p className="text-brand-cream/70">
+        {/* Three columns explanation */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto border-t border-foreground/20 pt-12">
+          <div className="text-center">
+            <h3 className="text-xl font-serif font-bold mb-3 text-foreground uppercase tracking-wide">
+              Resultado
+            </h3>
+            <p className="text-muted-foreground font-body text-sm">
               Foco em resultados mensuráveis e crescimento sustentável
             </p>
           </div>
-          <div className="text-center p-6 rounded-lg bg-brand-medium/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all hover:shadow-glow">
-            <h3 className="text-2xl font-bold mb-3 text-brand-cream font-montserrat">Gestão</h3>
-            <p className="text-brand-cream/70">
+          <div className="text-center border-x border-foreground/20 px-8">
+            <h3 className="text-xl font-serif font-bold mb-3 text-foreground uppercase tracking-wide">
+              Gestão
+            </h3>
+            <p className="text-muted-foreground font-body text-sm">
               Processos eficientes e gestão estratégica do seu negócio
             </p>
           </div>
-          <div className="text-center p-6 rounded-lg bg-brand-medium/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all hover:shadow-glow">
-            <h3 className="text-2xl font-bold mb-3 text-brand-cream font-montserrat">Tecnologia</h3>
-            <p className="text-brand-cream/70">
+          <div className="text-center">
+            <h3 className="text-xl font-serif font-bold mb-3 text-foreground uppercase tracking-wide">
+              Tecnologia
+            </h3>
+            <p className="text-muted-foreground font-body text-sm">
               Soluções tecnológicas inovadoras e de ponta
             </p>
           </div>

@@ -1,4 +1,3 @@
-import { Card } from "@/components/ui/card";
 import { Users, Wrench, TrendingUp } from "lucide-react";
 
 const ServicesSection = () => {
@@ -6,7 +5,7 @@ const ServicesSection = () => {
     {
       id: "advisor",
       icon: Users,
-      title: "Advisor",
+      title: "ADVISOR",
       subtitle: "Sócios em crescimento",
       description: "Atuamos como sócios, oferecendo consultoria e orientação para a gestão e inovação do seu negócio.",
       features: [
@@ -19,7 +18,7 @@ const ServicesSection = () => {
     {
       id: "forge",
       icon: Wrench,
-      title: "Forge",
+      title: "FORGE",
       subtitle: "Criamos soluções",
       description: "Criamos produtos e soluções digitais sob medida para atender às necessidades específicas do seu negócio.",
       features: [
@@ -32,7 +31,7 @@ const ServicesSection = () => {
     {
       id: "growth",
       icon: TrendingUp,
-      title: "Growth",
+      title: "GROWTH",
       subtitle: "Geramos resultados",
       description: "Geramos resultados com marketing digital e estratégias de vendas que realmente convertem.",
       features: [
@@ -45,84 +44,66 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-brand-medium to-brand-dark">
+    <section className="py-20 bg-background border-t-2 border-foreground">
       <div className="container mx-auto px-6">
-        {/* Header */}
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-montserrat mb-6 text-brand-cream">
-            Nossas <span className="text-primary">Verticais</span>
+          <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Seção II</span>
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mt-4 mb-4 text-foreground">
+            Nossas Verticais
           </h2>
-          <p className="text-xl text-brand-cream/80 font-montserrat max-w-3xl mx-auto">
+          <div className="w-24 h-0.5 bg-foreground mx-auto mb-6"></div>
+          <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto italic">
             Três pilares fundamentais que trabalham em sinergia para acelerar o crescimento da sua empresa
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        {/* Services as newspaper columns */}
+        <div className="grid md:grid-cols-3 gap-0 border-t border-b border-foreground/30">
           {services.map((service, index) => (
-            <Card 
+            <article 
               key={service.id}
-              className="group relative overflow-hidden border-0 bg-brand-medium/50 backdrop-blur-sm border border-primary/20 hover:border-primary/40 shadow-soft hover:shadow-large transition-all duration-500 hover:scale-105"
+              className={`p-8 ${index !== 2 ? 'md:border-r border-foreground/30' : ''} ${index !== 0 ? 'border-t md:border-t-0 border-foreground/30' : ''}`}
             >
-              {/* Background Gradient */}
-              <div className={`absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-              
-              <div className="p-8 relative z-10">
-                {/* Icon */}
-                <div className={`w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
-                  <service.icon className="w-8 h-8 text-primary" />
-                </div>
-
-                {/* Content */}
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold font-montserrat mb-2 text-brand-cream">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm font-medium text-brand-cream/70 mb-4">
-                    {service.subtitle}
-                  </p>
-                  <p className="text-brand-cream/80 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-
-                {/* Features */}
-                <div className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-2 text-sm">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                      <span className="text-brand-cream/70">{feature}</span>
-                    </div>
-                  ))}
-                </div>
+              {/* Icon as decorative element */}
+              <div className="flex items-center gap-3 mb-4">
+                <service.icon className="w-5 h-5 text-foreground" strokeWidth={1.5} />
+                <span className="text-xs uppercase tracking-widest text-muted-foreground">{service.subtitle}</span>
               </div>
-            </Card>
+
+              <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4 text-foreground">
+                {service.title}
+              </h3>
+              
+              <div className="w-12 h-px bg-foreground mb-4"></div>
+              
+              <p className="text-muted-foreground font-body leading-relaxed mb-6">
+                {service.description}
+              </p>
+
+              {/* Features list */}
+              <ul className="space-y-2 text-sm">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-start gap-2 text-muted-foreground font-body">
+                    <span className="text-foreground">—</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
 
-        {/* Value Proposition */}
-        <div className="text-center">
-          <div className="bg-brand-medium/50 backdrop-blur-sm p-8 rounded-3xl shadow-medium border border-primary/20 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold font-montserrat mb-4 text-brand-cream">
+        {/* Bottom quote */}
+        <div className="mt-16 text-center max-w-3xl mx-auto">
+          <div className="border-t-2 border-b-2 border-foreground py-8">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4 text-foreground">
               O Diferencial Beezzy
             </h3>
-            <p className="text-brand-cream/80 mb-6 text-lg">
-              Enquanto outros oferecem soluções isoladas, nós integramos estratégia, tecnologia e marketing em um ecossistema único que maximiza resultados e acelera o crescimento sustentável.
+            <p className="text-muted-foreground font-body text-lg leading-relaxed italic">
+              "Enquanto outros oferecem soluções isoladas, nós integramos estratégia, 
+              tecnologia e marketing em um ecossistema único que maximiza resultados."
             </p>
-            <div className="grid md:grid-cols-3 gap-4 text-sm">
-              <div className="flex items-center justify-center gap-2 text-brand-cream/70">
-                <div className="w-2 h-2 bg-primary rounded-full" />
-                Abordagem integrada
-              </div>
-              <div className="flex items-center justify-center gap-2 text-brand-cream/70">
-                <div className="w-2 h-2 bg-primary rounded-full" />
-                Foco em resultados
-              </div>
-              <div className="flex items-center justify-center gap-2 text-brand-cream/70">
-                <div className="w-2 h-2 bg-primary rounded-full" />
-                Parceria estratégica
-              </div>
-            </div>
           </div>
         </div>
       </div>
