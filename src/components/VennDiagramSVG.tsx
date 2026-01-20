@@ -11,9 +11,9 @@ const VennDiagramSVG = () => {
         cy="200"
         r="150"
         fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="text-foreground"
+        stroke="hsl(144, 32%, 26%)"
+        strokeWidth="2"
+        opacity="0.8"
       />
       
       {/* Circle for GESTÃO (bottom left) */}
@@ -22,9 +22,9 @@ const VennDiagramSVG = () => {
         cy="350"
         r="150"
         fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="text-foreground"
+        stroke="hsl(144, 32%, 26%)"
+        strokeWidth="2"
+        opacity="0.8"
       />
       
       {/* Circle for TECNOLOGIA (bottom right) */}
@@ -33,9 +33,9 @@ const VennDiagramSVG = () => {
         cy="350"
         r="150"
         fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="text-foreground"
+        stroke="hsl(144, 32%, 26%)"
+        strokeWidth="2"
+        opacity="0.8"
       />
       
       {/* Text labels */}
@@ -43,11 +43,10 @@ const VennDiagramSVG = () => {
         x="400"
         y="100"
         textAnchor="middle"
-        fill="currentColor"
+        fill="hsl(45, 33%, 93%)"
         fontSize="24"
         fontWeight="600"
         fontFamily="'Playfair Display', serif"
-        className="text-foreground uppercase"
         letterSpacing="0.1em"
       >
         RESULTADO
@@ -57,11 +56,10 @@ const VennDiagramSVG = () => {
         x="180"
         y="450"
         textAnchor="middle"
-        fill="currentColor"
+        fill="hsl(45, 33%, 93%)"
         fontSize="24"
         fontWeight="600"
         fontFamily="'Playfair Display', serif"
-        className="text-foreground uppercase"
         letterSpacing="0.1em"
       >
         GESTÃO
@@ -71,11 +69,10 @@ const VennDiagramSVG = () => {
         x="620"
         y="450"
         textAnchor="middle"
-        fill="currentColor"
+        fill="hsl(45, 33%, 93%)"
         fontSize="24"
         fontWeight="600"
         fontFamily="'Playfair Display', serif"
-        className="text-foreground uppercase"
         letterSpacing="0.1em"
       >
         TECNOLOGIA
@@ -86,11 +83,10 @@ const VennDiagramSVG = () => {
         x="400"
         y="295"
         textAnchor="middle"
-        fill="currentColor"
+        fill="hsl(144, 32%, 26%)"
         fontSize="32"
         fontWeight="700"
         fontFamily="'Playfair Display', serif"
-        className="text-foreground"
         letterSpacing="0.05em"
       >
         BEEZZY
@@ -102,9 +98,8 @@ const VennDiagramSVG = () => {
         y1="310"
         x2="435"
         y2="310"
-        stroke="currentColor"
-        strokeWidth="1"
-        className="text-foreground"
+        stroke="hsl(144, 32%, 26%)"
+        strokeWidth="2"
       />
     </svg>
   );

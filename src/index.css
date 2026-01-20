@@ -4,119 +4,124 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Newspaper-inspired minimalist design system */
+/* Modern Beezzy Design System - Charcoal, Cream & Forest Green */
 
 @layer base {
   :root {
-    /* Base colors - Black & White Newspaper Theme */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 8%;
+    /* Base colors - Light Mode (Cream theme) */
+    --background: 45 33% 93%; /* #F5F0E6 - Cream Beige */
+    --foreground: 0 0% 11%; /* #1C1C1C - Charcoal */
 
-    /* Brand colors - Newspaper Palette */
-    --brand-primary: 0 0% 15%;
-    --brand-secondary: 0 0% 92%;
-    --brand-accent: 0 0% 8%;
-    --brand-dark: 0 0% 5%;
-    --brand-medium: 0 0% 15%;
-    --brand-cream: 0 0% 98%;
+    /* Brand colors */
+    --brand-primary: 0 0% 11%; /* #1C1C1C - Charcoal */
+    --brand-secondary: 45 33% 93%; /* #F5F0E6 - Cream */
+    --brand-accent: 144 32% 26%; /* #2D5A3D - Forest Green */
+    --brand-dark: 0 0% 8%;
+    --brand-medium: 0 0% 20%;
+    --brand-cream: 45 33% 93%;
     
     /* Component colors */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
-    --card-border: 0 0% 85%;
+    --card: 45 33% 96%;
+    --card-foreground: 0 0% 11%;
+    --card-border: 45 20% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 45 33% 96%;
+    --popover-foreground: 0 0% 11%;
 
-    --primary: 0 0% 8%;
-    --primary-foreground: 0 0% 98%;
-    --primary-hover: 0 0% 20%;
+    --primary: 144 32% 26%; /* Forest Green */
+    --primary-foreground: 45 33% 93%; /* Cream */
+    --primary-hover: 144 35% 20%; /* Darker Forest Green */
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 8%;
-    --secondary-hover: 0 0% 90%;
+    --secondary: 45 25% 88%;
+    --secondary-foreground: 0 0% 11%;
+    --secondary-hover: 45 25% 82%;
 
-    --muted: 0 0% 92%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 45 20% 85%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 0 0% 92%;
-    --accent-foreground: 0 0% 8%;
-    --accent-hover: 0 0% 85%;
+    --accent: 144 32% 26%; /* Forest Green */
+    --accent-foreground: 45 33% 93%;
+    --accent-hover: 144 35% 20%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 45 33% 93%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 92%;
-    --ring: 0 0% 8%;
+    --border: 45 20% 80%;
+    --input: 45 25% 88%;
+    --ring: 144 32% 26%;
 
-    --radius: 0px;
+    --radius: 4px;
 
-    /* Shadows - Subtle for newspaper feel */
-    --shadow-soft: 0 1px 2px hsla(0, 0%, 0%, 0.05);
-    --shadow-medium: 0 4px 12px hsla(0, 0%, 0%, 0.08);
-    --shadow-large: 0 8px 24px hsla(0, 0%, 0%, 0.12);
-    --shadow-glow: none;
+    /* Dark section colors */
+    --dark-bg: 0 0% 11%; /* #1C1C1C */
+    --dark-fg: 45 33% 93%; /* Cream text on dark */
+    --dark-muted: 45 20% 70%;
+
+    /* Shadows - Subtle and modern */
+    --shadow-soft: 0 2px 8px hsla(144, 32%, 26%, 0.08);
+    --shadow-medium: 0 4px 16px hsla(0, 0%, 11%, 0.12);
+    --shadow-large: 0 8px 32px hsla(0, 0%, 11%, 0.16);
+    --shadow-glow: 0 0 20px hsla(144, 32%, 26%, 0.15);
 
     /* Transitions */
     --transition-smooth: all 0.2s ease;
     --transition-bounce: all 0.3s ease;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 8%;
-    --sidebar-primary: 0 0% 8%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 92%;
-    --sidebar-accent-foreground: 0 0% 8%;
-    --sidebar-border: 0 0% 85%;
-    --sidebar-ring: 0 0% 8%;
+    --sidebar-background: 45 33% 93%;
+    --sidebar-foreground: 0 0% 11%;
+    --sidebar-primary: 144 32% 26%;
+    --sidebar-primary-foreground: 45 33% 93%;
+    --sidebar-accent: 45 25% 88%;
+    --sidebar-accent-foreground: 0 0% 11%;
+    --sidebar-border: 45 20% 80%;
+    --sidebar-ring: 144 32% 26%;
   }
 
   .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 11%; /* Charcoal */
+    --foreground: 45 33% 93%; /* Cream */
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
-    --card-border: 0 0% 20%;
+    --card: 0 0% 14%;
+    --card-foreground: 45 33% 93%;
+    --card-border: 0 0% 25%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 14%;
+    --popover-foreground: 45 33% 93%;
 
-    --primary: 0 0% 95%;
-    --primary-foreground: 0 0% 5%;
-    --primary-hover: 0 0% 80%;
+    --primary: 144 32% 35%; /* Lighter Forest Green for dark mode */
+    --primary-foreground: 0 0% 11%;
+    --primary-hover: 144 32% 45%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 95%;
-    --secondary-hover: 0 0% 20%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 45 33% 93%;
+    --secondary-hover: 0 0% 25%;
 
     --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 60%;
+    --muted-foreground: 45 20% 70%;
 
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 95%;
-    --accent-hover: 0 0% 20%;
+    --accent: 144 32% 35%;
+    --accent-foreground: 0 0% 11%;
+    --accent-hover: 144 32% 45%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive-foreground: 45 33% 93%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 0 0% 95%;
+    --border: 0 0% 25%;
+    --input: 0 0% 18%;
+    --ring: 144 32% 35%;
 
-    --shadow-soft: 0 1px 2px hsla(0, 0%, 0%, 0.2);
-    --shadow-medium: 0 4px 12px hsla(0, 0%, 0%, 0.3);
-    --shadow-large: 0 8px 24px hsla(0, 0%, 0%, 0.4);
+    --shadow-soft: 0 2px 8px hsla(0, 0%, 0%, 0.3);
+    --shadow-medium: 0 4px 16px hsla(0, 0%, 0%, 0.4);
+    --shadow-large: 0 8px 32px hsla(0, 0%, 0%, 0.5);
 
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 0 0% 95%;
-    --sidebar-primary-foreground: 0 0% 8%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 0 0% 95%;
+    --sidebar-background: 0 0% 14%;
+    --sidebar-foreground: 45 33% 93%;
+    --sidebar-primary: 144 32% 35%;
+    --sidebar-primary-foreground: 0 0% 11%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 45 33% 93%;
+    --sidebar-border: 0 0% 25%;
+    --sidebar-ring: 144 32% 35%;
   }
 }
 
@@ -141,17 +146,27 @@
   }
 }
 
-/* Newspaper decorative elements */
-.newspaper-rule {
-  @apply border-t-2 border-foreground;
+/* Modern decorative elements */
+.modern-rule {
+  @apply border-t-2 border-primary;
 }
 
-.newspaper-rule-thin {
-  @apply border-t border-foreground/30;
+.modern-rule-thin {
+  @apply border-t border-primary/30;
 }
 
-.newspaper-rule-double {
-  border-top: 3px double hsl(var(--foreground));
+.modern-rule-accent {
+  border-top: 3px solid hsl(var(--primary));
+}
+
+/* Dark section styling */
+.section-dark {
+  background-color: hsl(var(--dark-bg));
+  color: hsl(var(--dark-fg));
+}
+
+.section-dark .text-muted-foreground {
+  color: hsl(var(--dark-muted));
 }
 
 /* Drop cap for first letter */
@@ -162,4 +177,15 @@
   line-height: 0.8;
   padding-right: 0.5rem;
   font-weight: 700;
+  color: hsl(var(--primary));
+}
+
+/* Button hover effects */
+.btn-primary-hover {
+  transition: all 0.2s ease;
+}
+
+.btn-primary-hover:hover {
+  background-color: hsl(var(--primary-hover));
+  transform: translateY(-1px);
 }
