@@ -55,6 +55,11 @@ export default {
           foreground: "hsl(var(--accent-foreground))",
           hover: "hsl(var(--accent-hover))",
         },
+        dark: {
+          bg: "hsl(var(--dark-bg))",
+          fg: "hsl(var(--dark-fg))",
+          muted: "hsl(var(--dark-muted))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

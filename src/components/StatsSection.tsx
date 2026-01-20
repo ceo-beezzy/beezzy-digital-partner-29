@@ -23,34 +23,34 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-foreground text-background">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.3em] text-background/60">Seção III</span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mt-4 mb-4">
+          <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Seção III</span>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mt-4 mb-4 text-foreground">
             Resultados que Entregamos
           </h2>
-          <div className="w-24 h-0.5 bg-background mx-auto mb-6"></div>
-          <p className="text-lg text-background/70 font-body max-w-2xl mx-auto italic">
+          <div className="w-24 h-0.5 bg-primary mx-auto mb-6"></div>
+          <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto italic">
             Métricas reais dos últimos 12 meses
           </p>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border-t border-b border-background/30 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border-t border-b border-foreground/20 max-w-5xl mx-auto">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`py-12 px-6 text-center ${index !== 3 ? 'border-r border-background/30' : ''}`}
+              className={`py-12 px-6 text-center ${index !== 3 ? 'border-r border-foreground/20' : ''}`}
             >
-              <div className="text-5xl md:text-6xl font-serif font-bold mb-2">
+              <div className="text-5xl md:text-6xl font-serif font-bold mb-2 text-primary">
                 {stat.number}
               </div>
-              <h3 className="text-sm font-serif font-bold uppercase tracking-widest mb-2">
+              <h3 className="text-sm font-serif font-bold uppercase tracking-widest mb-2 text-foreground">
                 {stat.label}
               </h3>
-              <p className="text-xs text-background/60 font-body">
+              <p className="text-xs text-muted-foreground font-body">
                 {stat.description}
               </p>
             </div>
@@ -59,7 +59,7 @@ const StatsSection = () => {
 
         {/* Quote */}
         <div className="text-center mt-16">
-          <p className="text-lg text-background/80 font-body italic max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground font-body italic max-w-2xl mx-auto">
             "Cada número representa uma história de transformação, 
             uma empresa que cresceu e um sonho que se tornou realidade."
           </p>

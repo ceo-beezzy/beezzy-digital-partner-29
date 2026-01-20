@@ -15,7 +15,7 @@ const PillarsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background border-t border-foreground/20">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -23,7 +23,7 @@ const PillarsSection = () => {
           <h2 className="text-4xl md:text-5xl font-serif font-bold mt-4 mb-4 text-foreground">
             Nossos Pilares
           </h2>
-          <div className="w-24 h-0.5 bg-foreground mx-auto mb-6"></div>
+          <div className="w-24 h-0.5 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto italic">
             Os valores fundamentais que guiam cada projeto
           </p>
@@ -33,13 +33,13 @@ const PillarsSection = () => {
         <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
           {pillars.map((pillar, index) => (
             <div key={index} className="text-center">
-              <div className="text-6xl font-serif font-bold text-foreground/10 mb-4">
+              <div className="text-6xl font-serif font-bold text-primary/20 mb-4">
                 {String(index + 1).padStart(2, '0')}
               </div>
               <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-foreground uppercase tracking-wide">
                 {pillar.title}
               </h3>
-              <div className="w-12 h-px bg-foreground mx-auto mb-4"></div>
+              <div className="w-12 h-px bg-primary mx-auto mb-4"></div>
               <p className="text-muted-foreground font-body leading-relaxed">
                 {pillar.description}
               </p>
@@ -49,7 +49,7 @@ const PillarsSection = () => {
 
         {/* Quote Section */}
         <div className="mt-20 max-w-3xl mx-auto">
-          <div className="border-t-2 border-b-2 border-foreground py-12 text-center">
+          <div className="border-t-2 border-b-2 border-primary py-12 text-center">
             <blockquote className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4 italic">
               "Somos o Be Easy para a sua empresa"
             </blockquote>
