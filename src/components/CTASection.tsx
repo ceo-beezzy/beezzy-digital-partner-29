@@ -1,86 +1,100 @@
+import { Quote, ArrowRight } from "lucide-react";
+
 const CaseSuccessSection = () => {
   return (
-    <section className="py-20 bg-dark-bg text-dark-fg">
+    <section className="py-24 section-dark">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-xs uppercase tracking-[0.3em] text-dark-muted">Seção VI</span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mt-4 mb-4">
-            Case de Sucesso
+          <span className="tag-dark mb-4">Case de sucesso</span>
+          <h2 className="heading-section text-dark-fg mb-4">
+            Transformação real
           </h2>
-          <div className="w-24 h-0.5 bg-primary mx-auto mb-6"></div>
-          <p className="text-lg text-dark-muted font-body italic">
-            Uma história real de transformação empresarial
+          <p className="text-dark-muted max-w-xl mx-auto">
+            Uma história de como ajudamos empresas a superar desafios e alcançar resultados extraordinários
           </p>
         </div>
 
-        {/* Case Study */}
+        {/* Case Study Card */}
         <div className="max-w-4xl mx-auto">
-          <article className="border-t border-b border-dark-muted/30 py-12">
-            {/* Headline */}
-            <div className="text-center mb-12">
-              <span className="text-xs uppercase tracking-widest text-primary mb-4 block">Imobiliária Nova Era</span>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-                De prejuízo a lucro em 90 dias
-              </h3>
-              <p className="text-dark-muted font-body text-lg">
-                Como transformamos uma empresa em crise em uma história de recuperação e crescimento sustentável
-              </p>
+          <article className="bg-dark-fg/5 rounded-2xl p-10 border border-dark-fg/10">
+            {/* Company Tag */}
+            <div className="flex items-center gap-2 mb-6">
+              <div className="w-2 h-2 rounded-full bg-primary" />
+              <span className="text-sm text-primary font-medium">Imobiliária Nova Era</span>
             </div>
 
-            {/* Challenge and Solution - Editorial layout */}
-            <div className="grid md:grid-cols-2 gap-12 mb-12">
-              <div>
-                <h4 className="font-serif font-bold text-sm uppercase tracking-widest mb-4 border-b border-primary/50 pb-2 text-primary">
+            {/* Headline */}
+            <h3 className="text-3xl md:text-4xl font-bold text-dark-fg mb-4">
+              De prejuízo a lucro<br className="hidden md:block" />
+              em <span className="text-gradient-primary">90 dias</span>
+            </h3>
+            
+            <p className="text-dark-muted text-lg mb-10 max-w-2xl">
+              Como transformamos uma empresa em crise em uma história de recuperação e crescimento sustentável
+            </p>
+
+            {/* Challenge and Solution */}
+            <div className="grid md:grid-cols-2 gap-8 mb-10">
+              <div className="bg-dark-fg/5 rounded-xl p-6">
+                <h4 className="font-semibold text-sm uppercase tracking-widest mb-3 text-primary">
                   O Desafio
                 </h4>
-                <p className="text-dark-muted font-body leading-relaxed">
+                <p className="text-dark-muted leading-relaxed">
                   A Nova Era enfrentava mais de 8 meses consecutivos sem lucro, 
-                  com processos desorganizados, baixa conversão de leads e perda 
-                  constante de clientes para a concorrência.
+                  com processos desorganizados e baixa conversão de leads.
                 </p>
               </div>
-              <div>
-                <h4 className="font-serif font-bold text-sm uppercase tracking-widest mb-4 border-b border-primary/50 pb-2 text-primary">
+              <div className="bg-dark-fg/5 rounded-xl p-6">
+                <h4 className="font-semibold text-sm uppercase tracking-widest mb-3 text-primary">
                   A Transformação
                 </h4>
-                <p className="text-dark-muted font-body leading-relaxed">
-                  Implementamos uma estratégia integrada combinando automação de processos, 
-                  otimização de marketing digital e reestruturação da gestão comercial.
+                <p className="text-dark-muted leading-relaxed">
+                  Implementamos uma estratégia integrada combinando automação de processos 
+                  e otimização de marketing digital.
                 </p>
               </div>
             </div>
 
             {/* Results */}
-            <div className="grid grid-cols-3 gap-0 border-t border-b border-dark-muted/30 py-8">
-              <div className="text-center border-r border-dark-muted/30">
-                <div className="text-4xl font-serif font-bold mb-1 text-primary">3º</div>
+            <div className="grid grid-cols-3 gap-4 mb-10">
+              <div className="bg-dark-fg/5 rounded-xl p-6 text-center">
+                <div className="stat-number mb-1">3º</div>
                 <div className="text-xs uppercase tracking-widest text-dark-muted">Mês</div>
-                <div className="text-sm text-dark-muted font-body mt-1">Retorno ao lucro</div>
+                <div className="text-sm text-dark-muted mt-1">Retorno ao lucro</div>
               </div>
-              <div className="text-center border-r border-dark-muted/30">
-                <div className="text-4xl font-serif font-bold mb-1 text-primary">245%</div>
+              <div className="bg-dark-fg/5 rounded-xl p-6 text-center">
+                <div className="stat-number mb-1">245%</div>
                 <div className="text-xs uppercase tracking-widest text-dark-muted">Aumento</div>
-                <div className="text-sm text-dark-muted font-body mt-1">Conversão de leads</div>
+                <div className="text-sm text-dark-muted mt-1">Conversão de leads</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-serif font-bold mb-1 text-primary">100%</div>
+              <div className="bg-dark-fg/5 rounded-xl p-6 text-center">
+                <div className="stat-number mb-1">100%</div>
                 <div className="text-xs uppercase tracking-widest text-dark-muted">Digital</div>
-                <div className="text-sm text-dark-muted font-body mt-1">Processos automatizados</div>
+                <div className="text-sm text-dark-muted mt-1">Processos automatizados</div>
               </div>
             </div>
-          </article>
 
-          {/* Testimonial */}
-          <div className="text-center pt-12">
-            <blockquote className="text-xl md:text-2xl font-body italic text-dark-fg/90 mb-4">
-              "A Beezzy não apenas nos tirou da crise, nos deu as ferramentas e 
-              estratégias para nunca mais voltarmos a essa situação."
-            </blockquote>
-            <cite className="text-sm text-primary font-body not-italic">
-              — Diretor Comercial, Nova Era Imóveis
-            </cite>
-          </div>
+            {/* Testimonial */}
+            <div className="bg-primary/10 rounded-xl p-6 relative">
+              <Quote className="absolute top-4 left-4 w-8 h-8 text-primary/30" />
+              <blockquote className="text-lg text-dark-fg/90 italic pl-8">
+                "A Beezzy não apenas nos tirou da crise, nos deu as ferramentas e 
+                estratégias para nunca mais voltarmos a essa situação."
+              </blockquote>
+              <cite className="block text-sm text-primary mt-4 pl-8 not-italic font-medium">
+                — Diretor Comercial, Nova Era Imóveis
+              </cite>
+            </div>
+          </article>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-12">
+          <button className="btn-primary">
+            Quero resultados assim
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
       </div>
     </section>
