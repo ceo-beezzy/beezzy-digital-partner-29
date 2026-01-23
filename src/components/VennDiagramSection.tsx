@@ -5,51 +5,52 @@ const VennDiagramSection = () => {
   const concepts = [
     {
       icon: Target,
-      title: "Resultado",
+      title: "RESULTADO",
       description: "Foco em resultados mensuráveis e crescimento sustentável"
     },
     {
       icon: Settings,
-      title: "Gestão",
+      title: "GESTÃO",
       description: "Processos eficientes e gestão estratégica do seu negócio"
     },
     {
       icon: Cpu,
-      title: "Tecnologia",
+      title: "TECNOLOGIA",
       description: "Soluções tecnológicas inovadoras e de ponta"
     }
   ];
 
   return (
-    <section className="py-24 section-gradient">
+    <section id="methodology" className="py-32 bg-background relative grid-bg">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-12">
-          <span className="tag mb-4">Metodologia</span>
-          <h2 className="heading-section mb-4">
-            A interseção perfeita
+        <div className="text-center mb-16">
+          <div className="tag-neon mb-6">Metodologia</div>
+          <h2 className="heading-section text-foreground">
+            A INTERSEÇÃO<br />
+            <span className="text-primary text-glow">PERFEITA</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-muted-foreground max-w-xl mx-auto mt-6 text-lg">
             Na Beezzy, unimos Resultado, Gestão e Tecnologia para transformar seu negócio
           </p>
         </div>
 
         {/* Diagram */}
-        <div className="flex justify-center items-center max-w-lg mx-auto mb-16">
+        <div className="flex justify-center items-center max-w-lg mx-auto mb-20">
           <VennDiagramSVG />
         </div>
 
         {/* Three columns explanation */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {concepts.map((concept, index) => (
-            <div key={index} className="card-modern text-center">
-              <div className="icon-container mx-auto mb-4">
-                <concept.icon className="w-6 h-6 text-primary" strokeWidth={1.5} />
+            <div key={index} className="card-dark text-center hud-frame hover-lift">
+              <div className="icon-neon mx-auto mb-6">
+                <concept.icon className="w-6 h-6" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">
+              <h3 className="heading-card mb-4 text-foreground">
                 {concept.title}
               </h3>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground">
                 {concept.description}
               </p>
             </div>
